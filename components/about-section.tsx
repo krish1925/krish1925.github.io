@@ -50,10 +50,6 @@ export default function AboutSection() {
               should be accessible and impactful—whether that's helping 25,000+ students navigate course selection
               through Bruinwalk or developing AI tools that streamline business operations.
             </p>
-            <p>
-              Currently seeking opportunities where I can apply my expertise in NLP, computer vision, and full-stack
-              development to create meaningful impact.
-            </p>
           </div>
         </div>
 

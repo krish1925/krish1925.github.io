@@ -176,8 +176,6 @@ export default function HeroSection() {
               Turning complex problems into elegant solutions, one algorithm at a time
             </p>
             <div className="flex flex-wrap justify-center gap-3 mt-4 text-sm text-gray-400">
-              <span>(310) 343-2561</span>
-              <span>•</span>
               <span>krishhnpatel@gmail.com</span>
               <span>•</span>
               <a href="https://linkedin.com/in/krishpatel2" className="hover:text-cyan-400 transition-colors">

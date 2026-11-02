@@ -1,6 +1,6 @@
 "use client"
 
-import { Send, MapPin, Phone, Mail, Github, Linkedin } from "lucide-react"
+import { Send, MapPin, Mail, Github, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function ContactSection() {
@@ -10,12 +10,6 @@ export default function ContactSection() {
       label: "Location",
       value: "Los Angeles, CA",
       color: "from-red-500 to-pink-500",
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "(310) 343-2561",
-      color: "from-green-500 to-teal-500",
     },
     {
       icon: Mail,
@@ -44,9 +38,6 @@ export default function ContactSection() {
               I'm always excited to tackle challenging problems and collaborate with innovative teams. Whether you're
               scoping an AI proof-of-concept or looking for an engineer who can bridge customers and product, let's
               connect.
-            </p>
-            <p className="text-lg text-cyan-400 font-medium">
-              Recent UCLA Graduate seeking: Full-time opportunities in AI/ML, Full-Stack Development, or Data Science
             </p>
           </div>
         </div>
@@ -87,18 +78,6 @@ export default function ContactSection() {
                   </div>
                 ))}
               </div>
-            </div>
-
-            {/* Availability Status */}
-            <div className="p-6 bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50">
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                <span className="text-green-400 font-medium">Available for new projects</span>
-              </div>
-              <p className="text-gray-400">
-                I'm currently accepting new freelance projects and collaborations. Let's discuss how we can work
-                together!
-              </p>
             </div>
 
             {/* Social Links */}
