@@ -1,42 +1,9 @@
 "use client"
 
-import type React from "react"
-
-import { useState } from "react"
 import { Send, MapPin, Phone, Mail, Github, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 
 export default function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }))
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-
-    console.log("Form submitted:", formData)
-    setIsSubmitting(false)
-    setFormData({ name: "", email: "", subject: "", message: "" })
-  }
-
   const contactInfo = [
     {
       icon: MapPin,
@@ -53,7 +20,7 @@ export default function ContactSection() {
     {
       icon: Mail,
       label: "Email",
-      value: "knpatel@ucla.edu",
+      value: "krishhnpatel@gmail.com",
       color: "from-blue-500 to-cyan-500",
     },
   ]
@@ -75,7 +42,7 @@ export default function ContactSection() {
           <div className="text-xl text-gray-300 max-w-3xl mx-auto space-y-4">
             <p>
               I'm always excited to tackle challenging problems and collaborate with innovative teams. Whether you're
-              looking for an intern who can hit the ground running or a collaborator for your next AI project, let's
+              scoping an AI proof-of-concept or looking for an engineer who can bridge customers and product, let's
               connect.
             </p>
             <p className="text-lg text-cyan-400 font-medium">
@@ -85,79 +52,20 @@ export default function ContactSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
+          {/* Email CTA */}
           <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-semibold text-white mb-6">Send me a message</h3>
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <Input
-                      type="text"
-                      name="name"
-                      placeholder="Your Name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="bg-gray-800/50 border-gray-700 text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-cyan-400"
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      type="email"
-                      name="email"
-                      placeholder="Your Email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="bg-gray-800/50 border-gray-700 text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-cyan-400"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <Input
-                    type="text"
-                    name="subject"
-                    placeholder="Subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    required
-                    className="bg-gray-800/50 border-gray-700 text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-cyan-400"
-                  />
-                </div>
-
-                <div>
-                  <Textarea
-                    name="message"
-                    placeholder="Your Message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                    rows={6}
-                    className="bg-gray-800/50 border-gray-700 text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-cyan-400 resize-none"
-                  />
-                </div>
-
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? (
-                    <div className="flex items-center justify-center">
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />
-                      Sending...
-                    </div>
-                  ) : (
-                    <div className="flex items-center justify-center">
-                      <Send className="h-5 w-5 mr-2" />
-                      Send Message
-                    </div>
-                  )}
-                </Button>
-              </form>
+            <div className="p-8 bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50">
+              <h3 className="text-2xl font-semibold text-white mb-4">Get in touch</h3>
+              <p className="text-gray-300 mb-6">
+                The fastest way to reach me is email. I usually reply within a day or two.
+              </p>
+              <a
+                href="mailto:krishhnpatel@gmail.com"
+                className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+              >
+                <Send className="h-5 w-5 mr-2" />
+                krishhnpatel@gmail.com
+              </a>
             </div>
           </div>
 
@@ -200,11 +108,14 @@ export default function ContactSection() {
                 {socialLinks.map((social, index) => (
                   <Button
                     key={index}
+                    asChild
                     variant="ghost"
                     size="icon"
                     className="text-gray-400 hover:text-cyan-400 hover:scale-110 transition-all duration-300 border border-gray-700 hover:border-cyan-400"
                   >
-                    <social.icon className="h-5 w-5" />
+                    <a href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}>
+                      <social.icon className="h-5 w-5" />
+                    </a>
                   </Button>
                 ))}
               </div>
@@ -215,7 +126,7 @@ export default function ContactSection() {
         {/* Footer */}
         <div className="mt-16 pt-8 border-t border-gray-800 text-center">
           <p className="text-gray-400">
-            © 2024 Krish Patel. All rights reserved. Built with passion and cutting-edge technology.
+            © {new Date().getFullYear()} Krish Patel. All rights reserved. Built with passion and cutting-edge technology.
           </p>
         </div>
       </div>

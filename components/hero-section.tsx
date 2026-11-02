@@ -170,7 +170,7 @@ export default function HeroSection() {
           {/* Push content down below vector field */}
           <div className="space-y-4">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white">
-              4th Year UCLA Graduate | AI Researcher | Full-Stack Developer
+              Sales Engineer | Forward Deployed Engineer | AI, RAG &amp; Vector Search
             </h2>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
               Turning complex problems into elegant solutions, one algorithm at a time
@@ -178,7 +178,7 @@ export default function HeroSection() {
             <div className="flex flex-wrap justify-center gap-3 mt-4 text-sm text-gray-400">
               <span>(310) 343-2561</span>
               <span>•</span>
-              <span>knpatel@ucla.edu</span>
+              <span>krishhnpatel@gmail.com</span>
               <span>•</span>
               <a href="https://linkedin.com/in/krishpatel2" className="hover:text-cyan-400 transition-colors">
                 linkedin.com/in/krishpatel2

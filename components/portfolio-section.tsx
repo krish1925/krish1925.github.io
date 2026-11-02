@@ -9,6 +9,18 @@ export default function PortfolioSection() {
 
   const projects = [
     {
+      id: 0,
+      title: "Isotrieve - Embedding Migration for Vector DBs",
+      description:
+        "Open-source Python library (on PyPI) that migrates a vector database to a new embedding model without re-embedding the corpus. Fits a lightweight linear map from ~2K calibration texts and gates the migration on measured retrieval retention (87-91% on BEIR). Adapters for Chroma, Qdrant, LangChain, and LlamaIndex.",
+      image: "/placeholder.svg?height=400&width=600",
+      category: "ai",
+      technologies: ["Python", "NumPy", "Qdrant", "Chroma", "BEIR"],
+      featured: true,
+      github: "https://github.com/krish1925/isotrieve",
+      link: "https://krish1925.github.io/isotrieve/",
+    },
+    {
       id: 1,
       title: "FlashGPT - Modular Transformer Architecture",
       description:
@@ -28,7 +40,7 @@ export default function PortfolioSection() {
       category: "web",
       technologies: ["React", "MongoDB", "Node.js", "Express"],
       featured: true,
-      github: "https://github.com/krish1925/gym-partner-finder",
+      github: "https://github.com/krish1925/Gym-Partner-Finder",
     },
     {
       id: 3,
@@ -39,7 +51,7 @@ export default function PortfolioSection() {
       category: "ai",
       technologies: ["Next.js", "Flask", "MongoDB", "ChromaDB", "Llama3"],
       featured: true,
-      github: "https://github.com/krish1925/sanjeevani",
+      github: "https://github.com/jayantp2003/Sanjeevani",
     },
     {
       id: 4,
@@ -61,7 +73,7 @@ export default function PortfolioSection() {
       category: "systems",
       technologies: ["C", "Linux", "Arch Linux", "File Systems"],
       featured: false,
-      github: "https://github.com/krish1925/ext2-filesystem",
+      github: "https://github.com/krish1925/Ext2-File-System",
     },
     {
       id: 6,
@@ -72,7 +84,8 @@ export default function PortfolioSection() {
       category: "web",
       technologies: ["JavaScript", "Firebase", "Firestore", "CSV Processing"],
       featured: false,
-      github: "https://github.com/krish1925/tennis-match-manager",
+      github: "https://github.com/bruin-tennis-consulting/match-manager",
+      link: "https://match-manager-umber.vercel.app/",
     },
     {
       id: 7,
@@ -83,18 +96,19 @@ export default function PortfolioSection() {
       category: "web",
       technologies: ["JavaScript", "Data Analytics", "Sports Analytics"],
       featured: true,
-      link: "https://tennis.bruinsportsanalytics.com",
+      github: "https://github.com/krish1925/UCLA-Tennis-Match-Viewer",
+      link: "https://match-viewing-dashboard.web.app/",
     },
     {
       id: 8,
       title: "Neural Networks Coursework (ECE C147)",
       description:
-        "Comprehensive implementation of machine learning algorithms from scratch for UCLA's Neural Networks and Deep Learning course. Includes five homework assignments covering fundamental ML concepts.",
+        "Comprehensive implementation of machine learning algorithms from scratch for UCLA's Neural Networks and Deep Learning course. Five modules, from linear regression to CNNs, all implemented from scratch in NumPy.",
       image: "/placeholder.svg?height=400&width=600",
       category: "ai",
       technologies: ["Python", "Jupyter Notebook", "NumPy", "Machine Learning"],
       featured: false,
-      github: "https://github.com/krish1925/neural-networks-coursework",
+      github: "https://github.com/krish1925/ECE-C147",
     },
   ]
 
@@ -117,7 +131,7 @@ export default function PortfolioSection() {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            A showcase of my recent work spanning web development, mobile applications, and design projects
+            A showcase of my recent work spanning AI/ML, retrieval systems, web development, and systems
           </p>
         </div>
 
